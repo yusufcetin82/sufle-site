@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sufle: Gizlilik politikası</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<nav><a href="index.html">Sufle</a><a href="destek.html">Destek</a><a href="gizlilik.html">Gizlilik</a></nav>
+<h1>Gizlilik politikası</h1>
+<p class="dim">Son güncelleme: 18 Kasım 2026</p>
+
+<p>Sufle hiçbir kişisel veri toplamaz. Uygulamada hesap, reklam, analiz ya da izleme yoktur ve geliştirici, uygulamayı nasıl kullandığınıza dair hiçbir bilgi almaz.</p>
+
+<h2>Metinleriniz</h2>
+<p>Yazdığınız ve içe aktardığınız metinler ile ayarlarınız yalnızca cihazınızda saklanır. Hiçbir sunucuya gönderilmez. Uygulamayı sildiğinizde bu veriler de silinir. Yedekleme özelliği, metinlerinizi sizin seçtiğiniz yere bir dosya olarak kaydeder; o dosyanın nerede duracağına siz karar verirsiniz.</p>
+
+<h2>Mikrofon ve konuşma tanıma</h2>
+<p>"Sesle takip" özelliğini açarsanız uygulama, okuduğunuz sözleri metinle eşleştirmek için mikrofonu ve Apple'ın konuşma tanıma hizmetini kullanır. Ses kaydedilmez ve saklanmaz. Cihazınız Türkçe için cihaz içi tanımayı destekliyorsa ses cihazdan çıkmaz; desteklemiyorsa konuşma tanıma için Apple'ın sunucularına gönderilir ve bu işlem Apple'ın gizlilik politikasına tabidir. Özelliği kapalı tuttuğunuzda mikrofon hiç kullanılmaz.</p>
+
+<h2>Bluetooth ve yerel ağ</h2>
+<p>"Uzaktan kumanda" özelliğini açarsanız uygulama, yakındaki kendi cihazlarınızın (Apple Watch, başka bir iPhone ya da iPad) akışı yönetebilmesi için Bluetooth ve yerel ağı kullanır. Bu bağlantı yalnızca cihazlarınız arasındadır, şifrelidir ve internete çıkmaz. Aktarılan bilgi; oynat, durdur gibi komutlar ile açık olan metnin adı ve süre bilgisidir.</p>
+
+<h2>Üçüncü taraflar</h2>
+<p>Uygulama hiçbir üçüncü taraf analiz, reklam ya da izleme kütüphanesi içermez ve verilerinizi kimseyle paylaşmaz.</p>
+
+<h2>Çocuklar</h2>
+<p>Uygulama hiçbir kullanıcıdan, çocuklar dahil, kişisel veri toplamaz.</p>
+
+<h2>Değişiklikler</h2>
+<p>Bu politika değişirse güncel hali bu sayfada yayınlanır ve üstteki tarih güncellenir.</p>
+
+<h2>İletişim</h2>
+<p>Sorularınız için: <span class="eposta" data-a="nitecfusuy" data-b="moc.liamg"></span><noscript>yusufcetin [et] gmail [nokta] com</noscript></p>
+</main>
+<script>
+document.querySelectorAll('.eposta').forEach(function (el) {
+  var flip = function (s) { return s.split('').reverse().join(''); };
+  var address = flip(el.dataset.a) + '@' + flip(el.dataset.b);
+  var link = document.createElement('a');
+  link.href = 'mailto:' + address;
+  link.textContent = address;
+  el.appendChild(link);
+});
+</script>
+</body>
+</html>
