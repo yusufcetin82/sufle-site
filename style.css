@@ -9,3 +9,5 @@ p, li { color: var(--fg); }
 a { color: var(--accent); }
 nav { margin-bottom: 36px; }
 nav a { margin-right: 18px; text-decoration: none; }
+
+nav a.lang { float: right; margin-right: 0; color: var(--dim); }

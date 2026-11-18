@@ -5,12 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sufle: Destek</title>
 <link rel="stylesheet" href="style.css">
+<link rel="alternate" hreflang="tr" href="https://yusufcetin82.github.io/sufle-site/destek.html">
+<link rel="alternate" hreflang="en" href="https://yusufcetin82.github.io/sufle-site/en/support.html">
 </head>
 <body>
 <main>
-<nav><a href="index.html">Sufle</a><a href="destek.html">Destek</a><a href="gizlilik.html">Gizlilik</a></nav>
+<nav><a href="index.html">Sufle</a><a href="destek.html">Destek</a><a href="gizlilik.html">Gizlilik</a><a class="lang" href="en/support.html" hreflang="en" lang="en">English</a></nav>
 <h1>Destek</h1>
-<p>Bir sorun yaşıyorsanız ya da öneriniz varsa yazın: <span class="eposta" data-a="nitecfusuy" data-b="moc.liamg"></span><noscript>(e-posta bağlantısı için JavaScript gerekir)</noscript></p>
+<p>Bir sorun yaşıyorsanız ya da öneriniz varsa yazın: <span class="eposta" data-a="nitecfusuy" data-b="moc.liamg" data-label="E-posta gönderin"></span><noscript>(e-posta bağlantısı için JavaScript gerekir)</noscript></p>
 
 <h2>Kumandanın tuşları yanlış yöne gidiyor</h2>
 <p>Bir metni açın, Ayarlar → Kumanda → "Kumandayı tanıt" adımını izleyin. Uygulama sizden üst ve alt tuşa basmanızı ister ve yönü kendisi ayarlar. iPad'in prompter'daki duruşunu değiştirdiğinizde bu adımı yeniden yapın.</p>
@@ -22,25 +24,11 @@
 <p>Prompter'ın açık olduğu cihazda bir metin açık olmalı ve "Uzaktan kumanda" anahtarı açık olmalı. Saat önce doğrudan Bluetooth ile bağlanmayı dener; olmazsa eşli iPhone üzerinden bağlanır. İlk kullanımda sorulan Bluetooth ve yerel ağ izinlerini verdiğinizden emin olun.</p>
 
 <h2>Sesle takip çalışmıyor</h2>
-<p>Ayarlar uygulamasında Sufle için Mikrofon ve Konuşma Tanıma izinlerinin açık olduğunu kontrol edin. Cihaz içi Türkçe tanıma yoksa internet bağlantısı gerekir.</p>
+<p>Ayarlar uygulamasında Sufle için Mikrofon ve Konuşma Tanıma izinlerinin açık olduğunu kontrol edin. Sufle, metnin dilini kendisi anlar; o dil için cihaz içi tanıma yoksa internet bağlantısı gerekir.</p>
 
 <h2>Metinde işaretler</h2>
 <p>Satır başına <code># Başlık</code> yazarsanız bölüm olur. <code>**iki yıldız**</code> arasındaki sözler vurgulanır. Boşluklarla ayrılmış <code>/</code> ve <code>//</code> nefes işaretidir. <code>[DUR]</code> yazdığınız yerde akış durur. Uygulamadaki "Yazım kılavuzu"nda örnekler var.</p>
 </main>
-<script>
-// The address is never written into the page: it is put together only when
-// the link is clicked, so harvesters reading the HTML do not find it.
-document.querySelectorAll('.eposta').forEach(function (el) {
-  var link = document.createElement('a');
-  link.href = '#';
-  link.textContent = 'E-posta gönderin';
-  link.addEventListener('click', function (event) {
-    event.preventDefault();
-    var flip = function (s) { return s.split('').reverse().join(''); };
-    window.location.href = 'mailto:' + flip(el.dataset.a) + '@' + flip(el.dataset.b) + '?subject=Sufle';
-  });
-  el.appendChild(link);
-});
-</script>
+<script src="site.js"></script>
 </body>
 </html>
