@@ -33,15 +33,20 @@
 <p>Bu politika değişirse güncel hali bu sayfada yayınlanır ve üstteki tarih güncellenir.</p>
 
 <h2>İletişim</h2>
-<p>Sorularınız için: <span class="eposta" data-a="nitecfusuy" data-b="moc.liamg"></span><noscript>yusufcetin [et] gmail [nokta] com</noscript></p>
+<p>Sorularınız için bize yazın: <span class="eposta" data-a="nitecfusuy" data-b="moc.liamg"></span><noscript>(e-posta bağlantısı için JavaScript gerekir)</noscript></p>
 </main>
 <script>
+// The address is never written into the page: it is put together only when
+// the link is clicked, so harvesters reading the HTML do not find it.
 document.querySelectorAll('.eposta').forEach(function (el) {
-  var flip = function (s) { return s.split('').reverse().join(''); };
-  var address = flip(el.dataset.a) + '@' + flip(el.dataset.b);
   var link = document.createElement('a');
-  link.href = 'mailto:' + address;
-  link.textContent = address;
+  link.href = '#';
+  link.textContent = 'E-posta gönderin';
+  link.addEventListener('click', function (event) {
+    event.preventDefault();
+    var flip = function (s) { return s.split('').reverse().join(''); };
+    window.location.href = 'mailto:' + flip(el.dataset.a) + '@' + flip(el.dataset.b) + '?subject=Sufle';
+  });
   el.appendChild(link);
 });
 </script>
